@@ -17,6 +17,13 @@ public class Task1 {
      * @return - the length of the last word in the string.
      */
     public int lengthOfLastWord(String str) {
-        return 0;
+        if (str == null || "".equals(str)) {
+            return 0;
+        }
+        var parts = str.split(" ");
+        if (parts.length == 0) {
+            return 0;
+        }
+        return parts[parts.length - 1].trim().length();
     }
 }
